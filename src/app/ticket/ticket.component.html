@@ -6,7 +6,10 @@
       <div>
         <h1 class="title">{{ title }}</h1>
         <div class="links" *ngFor = "let ticket of tickets">
-            <input type="button" class="giant-button" value="{{ticket.flight}}">
+            <input type="button" class="giant-button" value="{{ticket.flight}}" (click)="getTheTicket(ticket.number)">
+        </div>
+        <div *ngShow = "ticketSelected = true">
+                <!-- code du ticket -->
         </div>
       </div>
     </div>

@@ -28,4 +28,8 @@ export class AppComponentService {
           )
         );
       }
+    
+    getTheTicket(id: number): Observable<Ticket>{
+        return this.http.get<Ticket>("https:travel-api.clicksomeone.com/tickets?id=" + id);
+    }
 }
