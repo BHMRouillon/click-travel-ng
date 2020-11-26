@@ -6,7 +6,7 @@
     <div>
       <h1 class="title">{{ title }}</h1>
       <div class="links" *ngFor = "let destination of destinations">
-        <input type="button" class="giant-button" value="{{destination.name}}">
+        <input type="button" class="giant-button" value="{{destination.name}}" routerLink="/destination/{{destination.code}}">
       </div>
     </div>
   </div>
